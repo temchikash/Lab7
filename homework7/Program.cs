@@ -187,6 +187,43 @@ namespace homework7
             }
             Console.ReadKey();
         }
+        static void Exces5()
+        {
+            Console.WriteLine("Сравниваем песни");
+
+            Song song1 = new Song();
+            Song song2 = new Song();
+            Song song3 = new Song();
+            Song song4 = new Song();
+            Song song5 = new Song();
+            Song song6 = new Song();
+            Song song7 = new Song();
+            Song song8 = new Song();
+            Song song9 = new Song();
+            Song song10 = new Song();
+            
+            List<Song> list = new List<Song>() { song1, song2, song3, song4, song5, song6, song7, song8, song9, song9, song10 };
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i].SongName();
+                list[i].SongAuthor();
+                if (i != 0)
+                {
+                    list[i].prev = list[i - 1];
+                }
+                list[i].Print();
+
+            }
+            
+            if (list[4].Equals(list[4].prev))
+            {
+                Console.WriteLine($"Песня {list[4].Print()} и песня {list[4].prev.Print()} одинаковы ");
+            }
+            else
+            {
+                Console.WriteLine("Это разные песни");
+            }
+        }
     }
 }
 
