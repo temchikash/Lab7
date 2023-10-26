@@ -112,7 +112,9 @@ namespace homework7
             Exces2();
             Exces3();
             Exces4();
-            
+            ExceSSS();
+            Exces5();
+
             Console.ReadKey(true);
         }
 
@@ -151,7 +153,7 @@ namespace homework7
                 Console.WriteLine("Обьект не совмещается с данным типом\n");
             }
         }
-            static void Exces4()
+        static void Exces4()
         {
             Console.WriteLine("Упражнение 4\n");
 
@@ -163,14 +165,14 @@ namespace homework7
         {
             Console.WriteLine("Домашнее задание 1\n");
 
-            string input_file = "excesicone.txt";
-            string output_file = "excesicto.txt";
+            string input_file = "peopl.txt";
+            string output_file = "mail.txt";
             List<string> obj_Values = File.ReadAllLines(input_file).ToList();
             if (File.Exists(input_file))
             {
                 foreach (var file_line in obj_Values)
                 {
-                    var splitFileLine = file_line.Split(new[] { "%" }, StringSplitOptions.None);
+                    var splitFileLine = file_line.Split(new[] { "#" }, StringSplitOptions.None);
 
                     string giw = splitFileLine[0];
                     string woc = splitFileLine[1];
@@ -179,7 +181,7 @@ namespace homework7
                         str1.WriteLine(giw);
                     }
                 }
-                Console.WriteLine("Ура, все работает!\n");
+                Console.WriteLine("Работает\n");
             }
             else
             {
@@ -201,7 +203,7 @@ namespace homework7
             Song song8 = new Song();
             Song song9 = new Song();
             Song song10 = new Song();
-            
+
             List<Song> list = new List<Song>() { song1, song2, song3, song4, song5, song6, song7, song8, song9, song9, song10 };
             for (int i = 0; i < list.Count; i++)
             {
@@ -214,7 +216,7 @@ namespace homework7
                 list[i].Print();
 
             }
-            
+
             if (list[4].Equals(list[4].prev))
             {
                 Console.WriteLine($"Песня {list[4].Print()} и песня {list[4].prev.Print()} одинаковы ");
@@ -224,6 +226,6 @@ namespace homework7
                 Console.WriteLine("Это разные песни");
             }
         }
+
     }
 }
-
