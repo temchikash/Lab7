@@ -112,7 +112,7 @@ namespace homework7
             Exces2();
             Exces3();
             Exces4();
-            Exces5();
+            
             Console.ReadKey(true);
         }
 
