@@ -15,7 +15,7 @@ namespace homework7
         {
             Console.WriteLine("Введите название песни :");
             name = Console.ReadLine();
-            Console.WriteLine("Песня добавлена");
+            Console.WriteLine("Песня добавлена ");
         }
         public void SongAuthor()
         {
